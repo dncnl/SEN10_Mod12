@@ -24,7 +24,7 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        run: npm install eslint --save-dev
+        run: npm install eslint @eslint/js --save-dev
 
       - name: Run JS linter
         run: npx eslint .
