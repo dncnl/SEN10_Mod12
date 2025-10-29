@@ -59,8 +59,17 @@
 
     <footer>
         <p>Designed for demonstration purposes.</p>
+        <!-- New interactive button -->
+        <button id="showMessageBtn">Show Console Message</button>
     </footer>
 
-    <script src="app.js"></script>
+    <!-- Using module script so we can import from app.js -->
+    <script type="module">
+        import { showUglyUIMessage } from './app.js';
+
+        document.getElementById('showMessageBtn').addEventListener('click', () => {
+            showUglyUIMessage();
+        });
+    </script>
 </body>
 </html>

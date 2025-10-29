@@ -1,1 +1,3 @@
-console.log("Ugliest UI I've seen.");
+export function showUglyUIMessage() {
+    console.log("Ugliest UI I've seen.");
+}
