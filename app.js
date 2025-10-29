@@ -1,1 +1,1 @@
-console.log("Ugliest UI I've seen.")
+console.log("Ugliest UI I've seen.");
