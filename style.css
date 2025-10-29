@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ====== Base Layout ====== */
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(180deg, #ffffff 0%, #f5f6f7 100%);
+    color: #2e2e2e;
+    line-height: 1.7;
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* ====== Typography ====== */
+h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    text-align: center;
+    margin-bottom: 1.2rem;
+    letter-spacing: -0.5px;
+}
+
+h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #222;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 1rem;
+    max-width: 800px;
+}
+
+/* ====== Lists ====== */
+ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.6rem;
+    padding-left: 5px;
+}
+
+/* ====== Image Styling ====== */
+img {
+    display: block;
+    max-width: 100%;
+    border-radius: 10px;
+    margin: 30px auto;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* ====== Text Emphasis ====== */
+strong {
+    color: #111;
+}
+
+em {
+    color: #555;
+}
+
+/* ====== Accent Details ====== */
+a {
+    color: #0066cc;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #004a99;
+    text-decoration: underline;
+}
+
+/* ====== Section Styling ====== */
+section {
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 25px 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+}
+
+/* ====== Footer (optional) ====== */
+footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #ddd;
+}
