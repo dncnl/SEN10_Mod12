@@ -1,23 +1,25 @@
+console.log("✅ app.js loaded");
+
+export function showUglyUIMessage() {
+  alert("Ugliest UI I've seen.");
+  console.log("Ugliest UI I've seen.");
+}
+
 export function flashyIntro() {
-  console.log("🎨 flashyIntro triggered");
+  console.log("🎨 flashyIntro started (permanent RGB mode)");
 
-  const overlay = document.createElement("div");
-  Object.assign(overlay.style, {
-    position: "fixed",
-    top: "0",
-    left: "0",
-    width: "100vw",
-    height: "100vh",
-    backgroundColor: "rgba(255, 0, 0, 0.8)", // bright red overlay
-    zIndex: "999999",
-    pointerEvents: "none",
-  });
-  document.body.appendChild(overlay);
+  const header = document.querySelector("header h1");
+  const paragraphs = document.querySelectorAll("p, li");
 
-  setTimeout(() => {
-    overlay.style.transition = "opacity 1s ease";
-    overlay.style.opacity = "0";
-    setTimeout(() => overlay.remove(), 1000);
-    console.log("✨ Overlay removed");
-  }, 3000);
+  let hue = 0;
+
+  // Continuous RGB animation
+  setInterval(() => {
+    hue = (hue + 1) % 360; // smoothly loop through hues
+    const color = `hsl(${hue}, 100%, 50%)`;
+    if (header) header.style.color = color;
+    paragraphs.forEach((p) => (p.style.color = color));
+  }, 60); // adjust speed (lower = faster)
+
+  console.log("🌈 RGB animation active");
 }

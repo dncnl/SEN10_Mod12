@@ -6,7 +6,6 @@
     box-sizing: border-box;
 }
 
-/* ====== Base Layout ====== */
 body {
     font-family: 'Inter', sans-serif;
     background: linear-gradient(180deg, #ffffff 0%, #f5f6f7 100%);
@@ -17,7 +16,6 @@ body {
     margin: 0 auto;
 }
 
-/* ====== Typography ====== */
 h1 {
     font-size: 2.4rem;
     font-weight: 700;
@@ -42,7 +40,6 @@ p {
     max-width: 800px;
 }
 
-/* ====== Lists ====== */
 ul {
     margin-left: 1.5rem;
     margin-bottom: 1.5rem;
@@ -53,7 +50,6 @@ li {
     padding-left: 5px;
 }
 
-/* ====== Image Styling ====== */
 img {
     display: block;
     max-width: 100%;
@@ -62,7 +58,6 @@ img {
     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
 }
 
-/* ====== Text Emphasis ====== */
 strong {
     color: #111;
 }
@@ -71,7 +66,6 @@ em {
     color: #555;
 }
 
-/* ====== Accent Details ====== */
 a {
     color: #0066cc;
     text-decoration: none;
@@ -83,7 +77,6 @@ a:hover {
     text-decoration: underline;
 }
 
-/* ====== Section Styling ====== */
 section {
     background-color: #ffffff;
     border: 1px solid #e5e5e5;
@@ -93,7 +86,6 @@ section {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
 }
 
-/* ====== Footer (optional) ====== */
 footer {
     text-align: center;
     font-size: 0.9rem;
