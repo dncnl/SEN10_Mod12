@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700&display=swap');
 
 /* Global */
 * {
@@ -19,19 +19,25 @@ body {
 
 /* Headers */
 h1 {
+  font-family: 'Archivo Black', sans-serif;
   font-size: 2.4rem;
   font-weight: 700;
   margin-bottom: 1.2rem;
   letter-spacing: -0.5px;
-  transition: background 0.5s linear, transform 0.5s ease;
+  background: #b31b1b;
+  padding: 15px;
+  border-radius: 8px;
+  color: white;
+  transition: background 1s linear;
 }
 h2 {
+  font-family: 'Archivo Black', sans-serif;
   font-size: 1.6rem;
-  font-weight: 600;
+  font-weight: 700;
   color: #222;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  transition: transform 1.5s ease-in-out, color 1.5s ease-in-out;
+  transition: transform 2s ease-in-out, color 2s ease-in-out;
 }
 
 /* Paragraphs & Lists */
@@ -54,12 +60,12 @@ li {
 strong { color: #111; }
 em { color: #555; }
 a {
-  color: #0066cc;
+  color: #b31b1b;
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: color 0.3s ease;
 }
 a:hover {
-  color: #004a99;
+  color: #800000;
   text-decoration: underline;
 }
 
@@ -108,10 +114,10 @@ footer {
 }
 #loadingScreen .spinner {
   margin-top: 15px;
-  width: 50px;
-  height: 50px;
-  border: 6px solid rgba(255,255,255,0.3);
-  border-top: 6px solid white;
+  width: 40px;
+  height: 40px;
+  border: 5px solid rgba(255,255,255,0.3);
+  border-top: 5px solid white;
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
