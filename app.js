@@ -1,6 +1,7 @@
 // Show a simple alert and log
 export function showUglyUIMessage() {
-  console.log("Welcome to Yale School of Art Demo!");
+  alert("Welcome to Yale School of Art Demo!");
+  console.log("Welcome message displayed.");
 }
 
 // Modern header animation with gradient and fade-in effects
