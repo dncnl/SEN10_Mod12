@@ -15,14 +15,17 @@ export default [
       },
     },
   },
+  // ✅ Jest-specific globals for test files
   {
-    files: ["app.test.js"],
+    files: ["**/*.test.js"],
     languageOptions: {
       globals: {
         describe: true,
         test: true,
         expect: true,
         jest: true,
+        beforeAll: true,
+        global: true,
       },
     },
   },
