@@ -11,12 +11,11 @@ describe("Math Operations", () => {
     expect(add(1, 2)).toBe(3);
   });
 
-  // This is a failing test (commented out to show the concept)
-  /* 
-  test("intentionally failing test", () => {
+
+  test("failing test", () => {
     expect(true).toBe(false); // This would fail because true is not equal to false
   });
-  */
+
 });
 
 describe("UI message function", () => {
