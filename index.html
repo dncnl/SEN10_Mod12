@@ -1,94 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yale School of Art - SEN10</title>
-
-    <!-- Modern font: Inter + Roboto -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yale School of Art — SEN10</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Yale School of Art Website</h1>
-        <p class="subheading">
-            A study in intentionally “ugly” web design and modern minimalism.
-        </p>
-    </header>
+  <header>
+    <h1>Yale School of Art Website</h1>
+    <p style="text-align:center; color:#555;">
+      A study in intentionally “ugly” web design and how minimalism can improve user experience.
+    </p>
+  </header>
 
-    <!-- Navigation Header -->
-    <nav id="headerNav">
-        <ul>
-            <li><a href="#screenshot">Screenshot</a></li>
-            <li><a href="#whyUgly">Why Ugly</a></li>
-            <li><a href="#improve">Improvements</a></li>
-            <li><a href="#about">About</a></li>
-        </ul>
-    </nav>
+  <section id="screenshot">
+    <img src="./images/yale_ui.png" alt="Screenshot of Yale School of Art Website" class="centered-img">
+    <p class="caption">
+      Screenshot of <a href="https://art.yale.edu" target="_blank">art.yale.edu</a>
+    </p>
+  </section>
 
-    <!-- Yale screenshot -->
-    <section id="screenshot">
-        <img src="./yale_ui.png" alt="Screenshot of Yale School of Art Website" class="centered-img">
-        <p class="caption">
-            Screenshot of <a href="https://art.yale.edu" target="_blank">art.yale.edu</a>
-        </p>
-    </section>
+  <section id="whyUgly">
+    <h2>Why the Design Looks “Ugly” (On Purpose)</h2>
+    <p>
+      The Yale School of Art’s official website is a famous example of <strong>brutalist web design</strong>. 
+      It embraces raw structure, clashing colors, and minimal visual polish to make a philosophical statement about 
+      <em>function, authorship, and artistic experimentation</em>.
+    </p>
 
-    <section id="whyUgly">
-        <h2>Why the Design Looks “Ugly” (On Purpose)</h2>
-        <p>The Yale School of Art’s website is a famous example of <strong>brutalist web design</strong>. 
-           It embraces raw structure, clashing colors, and minimal visual polish to make a philosophical statement.
-        </p>
-        <ul>
-            <li><strong>Brutalist Aesthetic:</strong> Harsh contrasts and minimal alignment.</li>
-            <li><strong>Collaborative Editing:</strong> Any member can edit content.</li>
-            <li><strong>Philosophical Expression:</strong> Rebellion against polished UI.</li>
-            <li><strong>Low-Tech Authenticity:</strong> Built with basic HTML and CSS.</li>
-        </ul>
-    </section>
+    <ul>
+      <li><strong>Brutalist Aesthetic:</strong> Harsh color contrasts, oversized elements, and minimal alignment challenge modern design conventions.</li>
+      <li><strong>Collaborative Editing:</strong> The site functions like a wiki—any member of the Yale art community can edit or add content, leading to inconsistency.</li>
+      <li><strong>Philosophical Expression:</strong> The chaotic appearance is a deliberate act of rebellion against corporate and polished UI design.</li>
+      <li><strong>Low-Tech Authenticity:</strong> Built with basic HTML and CSS, the design highlights transparency and accessibility.</li>
+    </ul>
+  </section>
 
-    <section id="improve">
-        <h2>How It Could Be Improved</h2>
-        <ul>
-            <li>Consistent color palette for readability.</li>
-            <li>Clear typography and hierarchy.</li>
-            <li>Proper spacing and grid layout.</li>
-            <li>Responsive design across devices.</li>
-            <li>Subtle animations for polish.</li>
-        </ul>
-    </section>
+  <section id="improve">
+    <h2>How It Could Be Improved</h2>
+    <ul>
+      <li>Adopt a consistent, neutral color palette for readability.</li>
+      <li>Use clear typography and establish visual hierarchy.</li>
+      <li>Apply spacing and grid layouts for structure and flow.</li>
+      <li>Ensure responsive design across devices.</li>
+      <li>Add subtle animations or transitions for a polished feel.</li>
+    </ul>
+  </section>
 
-    <section id="about">
-        <p>
-            Despite its “ugly” interface, the website is a bold artistic statement about digital self-expression. 
-            It reminds designers that <strong>web design can be both art and communication</strong>.
-        </p>
-    </section>
+  <section id="about">
+    <p>
+      Despite its seemingly “ugly” interface, the Yale School of Art website is a bold artistic statement about 
+      digital self-expression. It reminds designers that <strong>web design can be both art and communication</strong>, 
+      and that beauty in design is often defined by purpose.
+    </p>
+  </section>
 
-    <footer>
-        <p>Designed for demonstration purposes.</p>
-        <button id="showMessageBtn">Show Message</button>
-    </footer>
+  <footer>
+    <p>Designed for demonstration purposes.</p>
+    <button id="showMessageBtn">Show Console Message</button>
+  </footer>
 
-    <!-- JS modules -->
-<script type="module">
-  import { showUglyUIMessage, showLoadingScreen, initHeaderNav, modernHeaderAnimation, animateSectionHeadings } from './app.js';
+  <script type="module">
+    import { showUglyUIMessage, showLoadingScreen, initHeaderNav, modernHeaderAnimation, animateSectionHeadings } from './app.js';
 
-  window.addEventListener('DOMContentLoaded', () => {
-    showLoadingScreen();
-    initHeaderNav();
-    modernHeaderAnimation();    // subtle gradient header
-    animateSectionHeadings();   // gentle pulse for section titles
-  });
+    window.addEventListener('DOMContentLoaded', () => {
+      showLoadingScreen();       // show loader
+      initHeaderNav();           // initialize header nav
+      modernHeaderAnimation();   // subtle gradient header
+      animateSectionHeadings();  // pulse section headings
+    });
 
-  document.getElementById('showMessageBtn').addEventListener('click', () => {
-    showUglyUIMessage();
-  });
-</script>
-
-
+    document.getElementById('showMessageBtn').addEventListener('click', () => {
+      showUglyUIMessage();
+    });
+  </script>
 </body>
 </html>

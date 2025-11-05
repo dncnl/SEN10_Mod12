@@ -37,14 +37,13 @@ export function initHeaderNav() {
   header.prepend(nav);
 }
 
-// Subtle, modern animation for header text
+// Modern subtle gradient animation for header text
 export function modernHeaderAnimation() {
   const header = document.querySelector("header h1");
   if (!header) return;
 
   let offset = 0;
   setInterval(() => {
-    // Gentle gradient shift
     offset = (offset + 0.5) % 100;
     header.style.background = `linear-gradient(90deg, #b31b1b ${offset}%, #800000 ${offset + 50}%)`;
     header.style.backgroundClip = "text";
