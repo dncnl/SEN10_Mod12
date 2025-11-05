@@ -1,34 +1,12 @@
 import js from "@eslint/js";
 
 export default [
-  js.configs.recommended,
   {
+    ...js.configs.recommended,
     languageOptions: {
       globals: {
-        console: "readonly",
-        window: "readonly",
-        document: "readonly",
-        setTimeout: "readonly",
-        clearTimeout: "readonly",
-        setInterval: "readonly",
-        clearInterval: "readonly"
-      }
+        ...js.environments.browser.globals, // ✅ enables alert, window, etc.
+      },
     },
-    rules: {
-      semi: ["error", "always"], // require semicolons
-      quotes: ["error", "double"], // use double quotes
-      "no-unused-vars": "warn"
-    }
   },
-  {
-    files: ["**/*.test.js"],
-    languageOptions: {
-      globals: {
-        describe: "readonly",
-        test: "readonly",
-        expect: "readonly",
-        jest: "readonly"
-      }
-    }
-  }
 ];
