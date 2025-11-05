@@ -37,7 +37,6 @@ h2 {
   color: #222;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  transition: transform 2s ease-in-out, color 2s ease-in-out;
 }
 
 /* Paragraphs & Lists */
@@ -110,7 +109,7 @@ footer {
   flex-direction: column;
   z-index: 9999;
   color: white;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Archivo Black', sans-serif; /* <-- changed from Inter to Archivo Black */
 }
 #loadingScreen .spinner {
   margin-top: 15px;
