@@ -3,21 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yale School of Art — Demo</title>
+    <title>Yale School of Art</title>
+
+    <!-- Modern font: Inter & Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
         <h1>Yale School of Art Website</h1>
-        <p style="text-align:center; color:#555;">
-            A study in intentionally “ugly” web design and minimalism.
+        <p class="subheading">
+            A study in intentionally “ugly” web design and modern minimalism.
         </p>
     </header>
 
+    <!-- Navigation Header -->
+    <nav id="headerNav">
+        <ul>
+            <li><a href="#whyUgly">Why Ugly</a></li>
+            <li><a href="#improve">Improvements</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Yale screenshot -->
+    <section id="screenshot">
+        <img src="yale_ui.png" alt="Screenshot of Yale School of Art Website" class="centered-img">
+        <p class="caption">
+            Screenshot of <a href="https://art.yale.edu" target="_blank">art.yale.edu</a>
+        </p>
+    </section>
+
     <section id="whyUgly">
         <h2>Why the Design Looks “Ugly” (On Purpose)</h2>
-        <p>The Yale School of Art’s official website is a famous example of <strong>brutalist web design</strong>...</p>
+        <p>The Yale School of Art’s official website is a famous example of <strong>brutalist web design</strong>. 
+           It embraces raw structure, clashing colors, and minimal visual polish to make a philosophical statement about function and artistic experimentation.
+        </p>
         <ul>
             <li><strong>Brutalist Aesthetic:</strong> Harsh contrasts and minimal alignment.</li>
             <li><strong>Collaborative Editing:</strong> Any member can edit content.</li>
@@ -38,7 +61,10 @@
     </section>
 
     <section id="about">
-        <p>Despite its “ugly” interface, the website is a bold artistic statement...</p>
+        <p>
+            Despite its “ugly” interface, the website is a bold artistic statement about digital self-expression. 
+            It reminds designers that <strong>web design can be both art and communication</strong>.
+        </p>
     </section>
 
     <footer>
@@ -49,13 +75,11 @@
 <script type="module">
   import { showUglyUIMessage, showLoadingScreen, initHeaderNav } from './app.js';
 
-  // Show modern loading screen on page load
   window.addEventListener('DOMContentLoaded', () => {
     showLoadingScreen();
     initHeaderNav();
   });
 
-  // Button behavior
   document.getElementById('showMessageBtn').addEventListener('click', () => {
     showUglyUIMessage();
   });
