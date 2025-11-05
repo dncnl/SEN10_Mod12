@@ -1,25 +1,42 @@
 console.log("✅ app.js loaded");
 
 export function showUglyUIMessage() {
-  alert("Ugliest UI I've seen.");
-  console.log("Ugliest UI I've seen.");
+  alert("Welcome to Yale School of Art Demo!");
+  console.log("Welcome message displayed.");
 }
 
-export function flashyIntro() {
-  console.log("🎨 flashyIntro started (permanent RGB mode)");
+// Loading screen animation
+export function showLoadingScreen() {
+  const loader = document.createElement('div');
+  loader.id = 'loadingScreen';
+  loader.innerHTML = `
+    <div class="loader-content">
+      <h1>Yale School of Art</h1>
+      <p>Loading content...</p>
+      <div class="spinner"></div>
+    </div>
+  `;
+  document.body.appendChild(loader);
 
-  const header = document.querySelector("header h1");
-  const paragraphs = document.querySelectorAll("p, li");
+  // Simulate loading (2 seconds)
+  setTimeout(() => {
+    loader.remove();
+  }, 2000);
+}
 
-  let hue = 0;
+// Modern red header navigation
+export function initHeaderNav() {
+  const header = document.querySelector('header');
+  if (!header) return;
 
-  // Continuous RGB animation
-  setInterval(() => {
-    hue = (hue + 1) % 360; // smoothly loop through hues
-    const color = `hsl(${hue}, 100%, 50%)`;
-    if (header) header.style.color = color;
-    paragraphs.forEach((p) => (p.style.color = color));
-  }, 60); // adjust speed (lower = faster)
-
-  console.log("🌈 RGB animation active");
+  const nav = document.createElement('nav');
+  nav.id = 'headerNav';
+  nav.innerHTML = `
+    <ul>
+      <li><a href="#whyUgly">Why Ugly</a></li>
+      <li><a href="#improve">Improvements</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  `;
+  header.prepend(nav);
 }
