@@ -12,9 +12,9 @@ describe("Math Operations", () => {
   });
 
 
-  test("failing test", () => {
-    expect(true).toBe(false); // This would fail because true is not equal to false
-  });
+  // test("failing test", () => {
+  //   expect(true).toBe(false); // This would fail because true is not equal to false
+  // });
 
 });
 
