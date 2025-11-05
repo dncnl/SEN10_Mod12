@@ -64,13 +64,14 @@
   </footer>
 
   <script type="module">
-    import { showUglyUIMessage, showLoadingScreen, initHeaderNav, modernHeaderAnimation, animateSectionHeadings } from './app.js';
+    import { showUglyUIMessage, showLoadingScreen, initHeaderNav, modernHeaderAnimation, animateSectionHeadings, initHoverEffects } from './app.js';
 
     window.addEventListener('DOMContentLoaded', () => {
       showLoadingScreen();       // show loader
       initHeaderNav();           // initialize header nav
       modernHeaderAnimation();   // subtle gradient header
-      animateSectionHeadings();  // gentle pulse section headings
+      animateSectionHeadings(); // gentle pulse section headings
+      initHoverEffects();       // initialize hover animations
     });
 
     document.getElementById('showMessageBtn').addEventListener('click', () => {

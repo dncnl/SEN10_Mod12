@@ -3,10 +3,13 @@ export function showUglyUIMessage() {
   console.log("Welcome to Yale School of Art Demo!");
 }
 
-// Modern header animation
+// Modern header animation with gradient and fade-in effects
 export function modernHeaderAnimation() {
   const header = document.querySelector('header');
+  const headerTitle = document.querySelector("header h1");
+  
   if (header) {
+    // Fade in animation for the whole header
     header.style.opacity = '0';
     header.style.transform = 'translateY(-20px)';
     header.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
@@ -15,6 +18,15 @@ export function modernHeaderAnimation() {
       header.style.opacity = '1';
       header.style.transform = 'translateY(0)';
     }, 100);
+  }
+
+  if (headerTitle) {
+    // Gradient animation for the title
+    headerTitle.style.background = "linear-gradient(90deg, #b31b1b 0%, #800000 100%)";
+    headerTitle.style.webkitBackgroundClip = "text";
+    headerTitle.style.webkitTextFillColor = "transparent";
+    headerTitle.style.backgroundClip = "text";
+    headerTitle.style.color = "transparent";
   }
 }
 
@@ -83,21 +95,18 @@ export function initHeaderNav() {
   header.prepend(nav);
 }
 
-// Modern subtle gradient animation for header text (GitHub Pages friendly)
-export function modernHeaderAnimation() {
-  const header = document.querySelector("header h1");
-  if (!header) return;
-
-  // Ensure proper gradient clipping
-  header.style.background = "linear-gradient(90deg, #b31b1b 0%, #800000 100%)";
-  header.style.webkitBackgroundClip = "text";
-  header.style.webkitTextFillColor = "transparent";
-  header.style.backgroundClip = "text";
-  header.style.color = "transparent";
-
-  let offset = 0;
-  setInterval(() => {
-    offset = (offset + 0.3) % 100; // subtle speed
-    header.style.backgroundImage = `linear-gradient(90deg, #b31b1b ${offset}%, #800000 ${offset + 50}%)`;
-  }, 80);
+// Initialize hover effects
+export function initHoverEffects() {
+  const sections = document.querySelectorAll('section');
+  sections.forEach(section => {
+    section.addEventListener('mouseenter', () => {
+      section.style.transform = 'translateY(-5px)';
+      section.style.boxShadow = '0 12px 30px rgba(0, 0, 0, 0.08)';
+    });
+    
+    section.addEventListener('mouseleave', () => {
+      section.style.transform = 'translateY(0)';
+      section.style.boxShadow = '0 8px 24px rgba(0, 0, 0, 0.06)';
+    });
+  });
 }
