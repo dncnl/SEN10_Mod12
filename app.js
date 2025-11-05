@@ -1,37 +1,23 @@
-export function showUglyUIMessage() {
-  console.log("Ugliest UI I've seen.");
-}
-
 export function flashyIntro() {
-  console.log("🎨 flashyIntro is running...");
+  console.log("🎨 flashyIntro triggered");
 
-  // Create a temporary overlay that flashes colors above the gradient
   const overlay = document.createElement("div");
-  overlay.style.position = "fixed";
-  overlay.style.top = "0";
-  overlay.style.left = "0";
-  overlay.style.width = "100vw";
-  overlay.style.height = "100vh";
-  overlay.style.zIndex = "9999";
-  overlay.style.pointerEvents = "none";
-  overlay.style.transition = "background-color 0.3s ease";
-  overlay.style.opacity = "0.9";
+  Object.assign(overlay.style, {
+    position: "fixed",
+    top: "0",
+    left: "0",
+    width: "100vw",
+    height: "100vh",
+    backgroundColor: "rgba(255, 0, 0, 0.8)", // bright red overlay
+    zIndex: "999999",
+    pointerEvents: "none",
+  });
   document.body.appendChild(overlay);
 
-  const colors = ["#ff6347", "#ffa500", "#32cd32", "#1e90ff", "#ff69b4"];
-  let i = 0;
-
-  const interval = setInterval(() => {
-    overlay.style.backgroundColor = colors[i] + "cc"; // cc = semi-transparent
-    i = (i + 1) % colors.length;
-  }, 400);
-
-  // Fade it out after 3 seconds
   setTimeout(() => {
-    clearInterval(interval);
     overlay.style.transition = "opacity 1s ease";
     overlay.style.opacity = "0";
     setTimeout(() => overlay.remove(), 1000);
-    console.log("✨ Welcome to the Ugliest (and Flashiest) UI!");
+    console.log("✨ Overlay removed");
   }, 3000);
 }
