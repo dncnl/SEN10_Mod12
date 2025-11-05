@@ -8,8 +8,9 @@
 }
 body {
   font-family: 'Inter', sans-serif;
-  background: linear-gradient(135deg, #ffefef 0%, #ffd6d6 100%);
-  color: #2e2e2e;
+  /* Predominantly red/white theme: subtle red background, white content blocks */
+  background: linear-gradient(180deg, #b31b1b 0%, #ffbcbc 60%);
+  color: #ffffff;
   line-height: 1.7;
   padding: 40px 20px;
   max-width: 900px;
@@ -27,12 +28,20 @@ h1 {
   letter-spacing: -0.5px;
   text-align: center;
   color: #ffffff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 15px;
-  border-radius: 8px;
-  background: linear-gradient(45deg, #b31b1b, #800000);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.18);
+  padding: 18px 20px;
+  border-radius: 6px;
+  background: transparent; /* keep title text white for contrast */
   animation: fadeInDown 1s ease-out;
 }
+
+/* Header styling to keep text visible on red background */
+header {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+header p { color: rgba(255,255,255,0.9); margin-top: 6px; }
+header nav a { color: rgba(255,255,255,0.95); font-weight:600; }
 
 h2 {
   font-family: 'Archivo Black', sans-serif;
@@ -103,6 +112,7 @@ section {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   animation: slideUp 0.6s ease-out forwards;
   opacity: 0;
+  color: #111; /* ensure dark text on white sections */
 }
 
 section:hover {
@@ -185,6 +195,15 @@ footer {
   z-index: 9999;
   color: white;
   font-family: 'Archivo Black', sans-serif; /* <-- changed from Inter to Archivo Black */
+}
+#loadingScreen .loader-content h1 {
+  color: #ffffff;
+  font-size: 2rem;
+  margin-bottom: 6px;
+}
+#loadingScreen .loader-content p {
+  color: rgba(255,255,255,0.95);
+  margin: 0;
 }
 #loadingScreen .spinner {
   margin-top: 15px;
