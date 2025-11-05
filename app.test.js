@@ -3,7 +3,6 @@ import { showUglyUIMessage } from "./app.js";
 
 describe("UI message function", () => {
   beforeAll(() => {
-    // Mock alert so Jest doesn't error (since it's not in Node)
     global.alert = jest.fn();
   });
 
@@ -17,7 +16,8 @@ describe("UI message function", () => {
 
     showUglyUIMessage();
 
-    expect(global.alert).toHaveBeenCalledWith("Ugliest UI I've seen.");
-    expect(mockLog).toHaveBeenCalledWith("Ugliest UI I've seen.");
+    // Match the updated alert message
+    expect(global.alert).toHaveBeenCalledWith("Welcome to Yale School of Art Demo!");
+    expect(mockLog).toHaveBeenCalledWith("Welcome message displayed.");
   });
 });
