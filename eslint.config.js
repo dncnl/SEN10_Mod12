@@ -5,7 +5,24 @@ export default [
     ...js.configs.recommended,
     languageOptions: {
       globals: {
-        ...js.environments.browser.globals, // ✅ enables alert, window, etc.
+        window: true,
+        document: true,
+        alert: true,
+        console: true,
+        setTimeout: true,
+        setInterval: true,
+        clearInterval: true,
+      },
+    },
+  },
+  {
+    files: ["app.test.js"],
+    languageOptions: {
+      globals: {
+        describe: true,
+        test: true,
+        expect: true,
+        jest: true,
       },
     },
   },
