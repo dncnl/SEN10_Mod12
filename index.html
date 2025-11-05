@@ -63,13 +63,17 @@
         <button id="showMessageBtn">Show Console Message</button>
     </footer>
 
-    <!-- Using module script so we can import from app.js -->
+
     <script type="module">
-        import { showUglyUIMessage } from './app.js';
+        import { showUglyUIMessage, flashyIntro } from './app.js';
+
+        // Run on page load
+        window.addEventListener('DOMContentLoaded', flashyIntro);
 
         document.getElementById('showMessageBtn').addEventListener('click', () => {
             showUglyUIMessage();
         });
     </script>
+
 </body>
 </html>
