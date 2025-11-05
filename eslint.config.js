@@ -7,13 +7,28 @@ export default [
       globals: {
         console: "readonly",
         window: "readonly",
-        document: "readonly"
+        document: "readonly",
+        setTimeout: "readonly",
+        clearTimeout: "readonly",
+        setInterval: "readonly",
+        clearInterval: "readonly"
       }
     },
     rules: {
-      semi: ["error", "always"], // Require semicolons
-      quotes: ["error", "double"], // Use double quotes
+      semi: ["error", "always"], // require semicolons
+      quotes: ["error", "double"], // use double quotes
       "no-unused-vars": "warn"
+    }
+  },
+  {
+    files: ["**/*.test.js"],
+    languageOptions: {
+      globals: {
+        describe: "readonly",
+        test: "readonly",
+        expect: "readonly",
+        jest: "readonly"
+      }
     }
   }
 ];
