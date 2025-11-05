@@ -1,7 +1,36 @@
 // Show a simple alert and log
 export function showUglyUIMessage() {
-  alert("Welcome to Yale School of Art Demo!");
-  console.log("Welcome message displayed.");
+  console.log("Welcome to Yale School of Art Demo!");
+}
+
+// Modern header animation
+export function modernHeaderAnimation() {
+  const header = document.querySelector('header');
+  if (header) {
+    header.style.opacity = '0';
+    header.style.transform = 'translateY(-20px)';
+    header.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+    
+    setTimeout(() => {
+      header.style.opacity = '1';
+      header.style.transform = 'translateY(0)';
+    }, 100);
+  }
+}
+
+// Animate section headings
+export function animateSectionHeadings() {
+  const headings = document.querySelectorAll('h2');
+  headings.forEach((heading, index) => {
+    heading.style.opacity = '0';
+    heading.style.transform = 'translateX(-20px)';
+    heading.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    
+    setTimeout(() => {
+      heading.style.opacity = '1';
+      heading.style.transform = 'translateX(0)';
+    }, 300 + (index * 200));
+  });
 }
 
 // Loading screen with spinner
