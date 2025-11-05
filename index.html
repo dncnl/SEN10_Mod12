@@ -74,19 +74,21 @@
     </footer>
 
     <!-- JS modules -->
-    <script type="module" src="./app.js"></script>
-    <script type="module">
-      import { showUglyUIMessage, showLoadingScreen, initHeaderNav } from './app.js';
+<script type="module">
+  import { showUglyUIMessage, showLoadingScreen, initHeaderNav, modernHeaderAnimation, animateSectionHeadings } from './app.js';
 
-      window.addEventListener('DOMContentLoaded', () => {
-        showLoadingScreen();
-        initHeaderNav();
-      });
+  window.addEventListener('DOMContentLoaded', () => {
+    showLoadingScreen();
+    initHeaderNav();
+    modernHeaderAnimation();    // subtle gradient header
+    animateSectionHeadings();   // gentle pulse for section titles
+  });
 
-      document.getElementById('showMessageBtn').addEventListener('click', () => {
-        showUglyUIMessage();
-      });
-    </script>
+  document.getElementById('showMessageBtn').addEventListener('click', () => {
+    showUglyUIMessage();
+  });
+</script>
+
 
 </body>
 </html>

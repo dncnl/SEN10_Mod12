@@ -1,8 +1,10 @@
+// Show a simple alert and log
 export function showUglyUIMessage() {
   alert("Welcome to Yale School of Art Demo!");
   console.log("Welcome message displayed.");
 }
 
+// Loading screen with spinner
 export function showLoadingScreen() {
   const loader = document.createElement('div');
   loader.id = 'loadingScreen';
@@ -17,9 +19,11 @@ export function showLoadingScreen() {
   setTimeout(() => loader.remove(), 2000);
 }
 
+// Initialize navigation inside header
 export function initHeaderNav() {
   const header = document.querySelector('header');
   if (!header) return;
+
   const nav = document.createElement('nav');
   nav.id = 'headerNav';
   nav.innerHTML = `
@@ -31,4 +35,39 @@ export function initHeaderNav() {
     </ul>
   `;
   header.prepend(nav);
+}
+
+// Subtle, modern animation for header text
+export function modernHeaderAnimation() {
+  const header = document.querySelector("header h1");
+  if (!header) return;
+
+  let offset = 0;
+  setInterval(() => {
+    // Gentle gradient shift
+    offset = (offset + 0.5) % 100;
+    header.style.background = `linear-gradient(90deg, #b31b1b ${offset}%, #800000 ${offset + 50}%)`;
+    header.style.backgroundClip = "text";
+    header.style.webkitBackgroundClip = "text";
+    header.style.color = "transparent";
+  }, 50);
+}
+
+// Subtle pulse animation for section headings
+export function animateSectionHeadings() {
+  const headings = document.querySelectorAll("section h2");
+  headings.forEach((h2) => {
+    h2.style.transition = "transform 1.5s ease-in-out, color 1.5s ease-in-out";
+    let growing = true;
+    setInterval(() => {
+      if (growing) {
+        h2.style.transform = "scale(1.05)";
+        h2.style.color = "#b31b1b";
+      } else {
+        h2.style.transform = "scale(1)";
+        h2.style.color = "#222";
+      }
+      growing = !growing;
+    }, 1500);
+  });
 }
