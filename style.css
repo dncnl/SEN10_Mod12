@@ -24,12 +24,16 @@ h1 {
   font-weight: 700;
   margin-bottom: 1.2rem;
   letter-spacing: -0.5px;
-  background: #b31b1b;
+  text-align: center;
+  background: linear-gradient(90deg, #b31b1b 0%, #800000 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
   padding: 15px;
   border-radius: 8px;
-  color: white;
-  transition: background 1s linear;
 }
+
 h2 {
   font-family: 'Archivo Black', sans-serif;
   font-size: 1.6rem;
